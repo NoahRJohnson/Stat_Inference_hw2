@@ -1,0 +1,82 @@
+---
+title: "Homework 2"
+author: "Noah Johnson"
+date: "February 17, 2018"
+output: pdf_document
+header-includes:
+  - \usepackage{enumitem}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(install.load)
+
+install_load("tidyverse")
+```
+
+## Exercises
+
+\textbf{4.2} There are two events $A$ and $B$. $P(A) = .5$ and $P(B) = .3$. The events $A$ and $B$ are independent.
+
+\begin{enumerate}[label=(\alph*)]
+
+\item \textbf{Find} $\mathbf{P(\tilde{A})}$
+
+\item \textbf{Find} $\mathbf{P(A \cap B)}$
+
+\item \textbf{Find} $\mathbf{P(A \cup B)}$
+
+\end{enumerate}
+
+\textbf{4.4} There are two events $A$ and $B$. $P(A) = .7$ and $P(B) = .8$. $P(\tilde{A} \cap \tilde{B}) = .1$.
+
+\begin{enumerate}[label=(\alph*)]
+
+\item \textbf{Are $\mathbf{A}$ and $\mathbf{B}$ independent events? Explain why or why not.}
+
+\item \textbf{Find} $\mathbf{P(A \cup B)}$
+
+\end{enumerate}
+
+\textbf{4.6} Two fair dice, one red and one green, are rolled. Let the event $A$ be "the sum of the faces showing is equal to seven." Let the event B be "the faces showing on the two dice are equal."
+
+\begin{enumerate}[label=(\alph*)]
+
+\item \textbf{List out the sample space of the experiment.}
+
+\item \textbf{List the outcomes in } $\mathbf{A}$, \textbf{and find} $\mathbf{P(A)}$.
+
+\item \textbf{List the outcomes in } $\mathbf{B}$, \textbf{and find} $\mathbf{P(B)}$.
+
+\item \textbf{List the outcomes in } $\mathbf{A \cap B}$, \textbf{and find} $\mathbf{P(A \cap B)}$.
+
+\item \textbf{Are the events} $\mathbf{A}$ \textbf{and} $\mathbf{B}$ \textbf{independent? Explain why or why not.}
+
+\item \textbf{How would you describe the relationship between event} $\mathbf{A}$ \textbf{and event} $\mathbf{B}$\textbf{?}
+
+\end{enumerate}
+
+\textbf{4.8} Two dice are rolled. The red die has been loaded. Its probabilities are $P(1) = P(2) = P(3) = P(4) = \frac{1}{5}$ and $P(5) = P(6) = \frac{1}{10}$. The green die is fair. Let the event $A$ be "the sum of the faces showing is an even number." Let the event B be "the sum of the faces showing is divisible by 3."
+
+\begin{enumerate}[label=(\alph*)]
+
+\item \textbf{List the outcomes in } $\mathbf{A}$, \textbf{and find} $\mathbf{P(A)}$.
+
+\item \textbf{List the outcomes in } $\mathbf{B}$, \textbf{and find} $\mathbf{P(B)}$.
+
+\item \textbf{List the outcomes in } $\mathbf{A \cap B}$, \textbf{and find} $\mathbf{P(A \cap B)}$.
+
+\item \textbf{Are the events} $\mathbf{A}$ \textbf{and} $\mathbf{B}$ \textbf{independent? Explain why or why not.}
+
+\end{enumerate}
+
+\textbf{4.10} Suppose there is a medical screening procedure for a specific cancer that has \textit{sensitivity} = .90, and \textit{specificity} = .95. Suppose the underlying rate of the cancer in the population is .001. Let $B$ be the event "the person has that specific cancer," and let $A$ be the event "the screening procedure gives a positive result."
+
+\begin{enumerate}[label=(\alph*)]
+
+\item \textbf{What is the probability that a person has the disease given the results of the screening is positive?}
+
+\item \textbf{Does this show that screening is effective in detecting this cancer?}
+
+\end{enumerate}
