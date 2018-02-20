@@ -23,9 +23,28 @@ install_load("tidyverse")
 
 \item \textbf{Find} $\mathbf{P(\tilde{A})}$
 
+$$
+P(\tilde{A}) = 1 - P(A) = 1 - 0.5 = 0.5
+$$
+
 \item \textbf{Find} $\mathbf{P(A \cap B)}$
 
+$$
+\begin{align}
+P(A \cap B) = P(B | A) * P(A) \\
+= P(B) * P(A)\ \ \  \text{(since A and B are independent)} \\
+= .3 * .5 = .15
+\end{align}
+$$
+
 \item \textbf{Find} $\mathbf{P(A \cup B)}$
+
+$$
+\begin{align}
+P(A \cup B) = P(A) + P(B) - P(A \cap B) \\
+= .5 + .3 - .15 = .65
+\end{align}
+$$
 
 \end{enumerate}
 
@@ -35,7 +54,25 @@ install_load("tidyverse")
 
 \item \textbf{Are $\mathbf{A}$ and $\mathbf{B}$ independent events? Explain why or why not.}
 
+$$
+\begin{align}
+P(A \cup B) = 1 - P(\overline{A \cup B}) \\ 
+= 1 - P(\tilde{A} \cap \tilde{B})\ \ \text{ (using De Morgan's Law)} \\
+= 1 - 0.1 = .9\\
+\\
+
+P(A \cap B) = P(A) + P(B) - P(A \cup B) \\
+= .7 + .8 - .9 = .6 \\
+\\
+
+P(B | A) = \frac{P(A \cap B)}{P(A)} = \frac{.6}{.7} = \frac{6}{7} \neq \frac{4}{5} = P(B) \\
+\therefore \text{A and B are not independent events}
+\end{align}
+$$
+
 \item \textbf{Find} $\mathbf{P(A \cup B)}$
+
+Refer to the first equation above. $P(A \cup B) = 0.9$.
 
 \end{enumerate}
 
@@ -45,7 +82,11 @@ install_load("tidyverse")
 
 \item \textbf{List out the sample space of the experiment.}
 
+$\Omega = \{ 2, 3, \dots, 12\}$
+
 \item \textbf{List the outcomes in } $\mathbf{A}$, \textbf{and find} $\mathbf{P(A)}$.
+
+$A = \{ () \}$
 
 \item \textbf{List the outcomes in } $\mathbf{B}$, \textbf{and find} $\mathbf{P(B)}$.
 
