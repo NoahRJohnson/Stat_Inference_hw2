@@ -5,6 +5,7 @@ date: "February 17, 2018"
 output: pdf_document
 header-includes:
   - \usepackage{enumitem}
+  - \usepackage{xcolor}
 ---
 
 ```{r setup, include=FALSE}
@@ -14,6 +15,8 @@ library(install.load)
 
 install_load("tidyverse")
 ```
+
+\newcommand{\numColor}[2] {\begingroup\color{#1} #2 \endgroup}
 
 ## Exercises
 
@@ -30,20 +33,20 @@ $$
 \item \textbf{Find} $\mathbf{P(A \cap B)}$
 
 $$
-\begin{align}
+\begin{aligned}
 P(A \cap B) = P(B | A) * P(A) \\
 = P(B) * P(A)\ \ \  \text{(since A and B are independent)} \\
 = .3 * .5 = .15
-\end{align}
+\end{aligned}
 $$
 
 \item \textbf{Find} $\mathbf{P(A \cup B)}$
 
 $$
-\begin{align}
+\begin{aligned}
 P(A \cup B) = P(A) + P(B) - P(A \cap B) \\
 = .5 + .3 - .15 = .65
-\end{align}
+\end{aligned}
 $$
 
 \end{enumerate}
@@ -55,19 +58,17 @@ $$
 \item \textbf{Are $\mathbf{A}$ and $\mathbf{B}$ independent events? Explain why or why not.}
 
 $$
-\begin{align}
+\begin{aligned}
 P(A \cup B) = 1 - P(\overline{A \cup B}) \\ 
 = 1 - P(\tilde{A} \cap \tilde{B})\ \ \text{ (using De Morgan's Law)} \\
 = 1 - 0.1 = .9\\
 \\
-
 P(A \cap B) = P(A) + P(B) - P(A \cup B) \\
 = .7 + .8 - .9 = .6 \\
 \\
-
-P(B | A) = \frac{P(A \cap B)}{P(A)} = \frac{.6}{.7} = \frac{6}{7} \neq \frac{4}{5} = P(B) \\
-\therefore \text{A and B are not independent events}
-\end{align}
+P(B | A) = \frac{P(A \cap B)}{P(A)} = \frac{.6}{.7} = \frac{6}{7} \\
+\neq \frac{4}{5} = P(B) \ \therefore \text{A and B are not independent events}
+\end{aligned}
 $$
 
 \item \textbf{Find} $\mathbf{P(A \cup B)}$
@@ -86,15 +87,34 @@ $\Omega = \{ 2, 3, \dots, 12\}$
 
 \item \textbf{List the outcomes in } $\mathbf{A}$, \textbf{and find} $\mathbf{P(A)}$.
 
-$A = \{ () \}$
+$A = \{ (\numColor{red}{1}, \numColor{green}{6}), (\numColor{red}{2}, \numColor{green}{5}), (\numColor{red}{3}, \numColor{green}{4}), (\numColor{red}{4}, \numColor{green}{3}), (\numColor{red}{5}, \numColor{green}{2}), (\numColor{red}{6}, \numColor{green}{1})\}$
+
+$P(A) = \frac{6}{36} = \frac{1}{6}$
 
 \item \textbf{List the outcomes in } $\mathbf{B}$, \textbf{and find} $\mathbf{P(B)}$.
 
+$B = \{ (\numColor{red}{1}, \numColor{green}{1}), (\numColor{red}{2}, \numColor{green}{2}), (\numColor{red}{3}, \numColor{green}{3}), (\numColor{red}{4}, \numColor{green}{4}), (\numColor{red}{5}, \numColor{green}{5}), (\numColor{red}{6}, \numColor{green}{6})\}$
+
+$P(B) = \frac{6}{36} = \frac{1}{6}$
+
 \item \textbf{List the outcomes in } $\mathbf{A \cap B}$, \textbf{and find} $\mathbf{P(A \cap B)}$.
+
+$A \cap B = \varnothing$
+
+$P(A \cap B) = 0$
 
 \item \textbf{Are the events} $\mathbf{A}$ \textbf{and} $\mathbf{B}$ \textbf{independent? Explain why or why not.}
 
+$$
+\begin{aligned}
+P(B | A) = \frac{P(A \cap B)}{P(A)} = \frac{0}{1/6} = 0\\
+\neq \frac{1}{6} = P(B)\ \therefore \text{A and B are not independent events}
+\end{aligned}
+$$
+
 \item \textbf{How would you describe the relationship between event} $\mathbf{A}$ \textbf{and event} $\mathbf{B}$\textbf{?}
+
+As mutually exclusive, since one event occurring precludes the other.
 
 \end{enumerate}
 
