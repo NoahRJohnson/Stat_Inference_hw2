@@ -124,7 +124,19 @@ As mutually exclusive, since one event occurring precludes the other.
 
 \item \textbf{List the outcomes in } $\mathbf{A}$, \textbf{and find} $\mathbf{P(A)}$.
 
+$$
+\begin{aligned}
+A = \{ (\numColor{red}{1}, \numColor{green}{1}), (\numColor{green}{1}, \numColor{red}{1}), (\numColor{red}{1}, \numColor{green}{3}), (\numColor{green}{1}, \numColor{red}{3}), (\numColor{red}{1}, \numColor{green}{5}), (\numColor{green}{1}, \numColor{red}{5}), (\numColor{red}{2}, \numColor{green}{2}), (\numColor{green}{2}, \numColor{red}{2}), (\numColor{red}{2}, \numColor{green}{4}), (\numColor{green}{2}, \numColor{red}{4}), (\numColor{red}{2}, \numColor{green}{6}), (\numColor{green}{2}, \numColor{red}{6}), (\numColor{red}{3}, \numColor{green}{3}), (\numColor{green}{3}, \numColor{red}{3}), (\numColor{red}{3}, \numColor{green}{5}), (\numColor{green}{3}, \numColor{red}{5}),\\ (\numColor{red}{4}, \numColor{green}{2}), (\numColor{green}{4}, \numColor{red}{2}), (\numColor{red}{4}, \numColor{green}{4}), (\numColor{green}{4}, \numColor{red}{4}), (\numColor{red}{5}, \numColor{green}{1}), (\numColor{green}{5}, \numColor{red}{1}), (\numColor{red}{5}, \numColor{green}{3}), (\numColor{green}{5}, \numColor{red}{3}), (\numColor{red}{5}, \numColor{green}{5}), (\numColor{green}{5}, \numColor{red}{5}), (\numColor{red}{6}, \numColor{green}{2}), (\numColor{green}{6}, \numColor{red}{2}), (\numColor{red}{6}, \numColor{green}{4}), (\numColor{green}{6}, \numColor{red}{4}), (\numColor{red}{6}, \numColor{green}{6}), (\numColor{green}{6}, \numColor{red}{6}) \}
+\end{aligned}
+$$
+
+$P(A) = \frac{32}{36} = \frac{1}{6}$
+
 \item \textbf{List the outcomes in } $\mathbf{B}$, \textbf{and find} $\mathbf{P(B)}$.
+
+$B = \{ (\numColor{red}{1}, \numColor{green}{1}), (\numColor{red}{2}, \numColor{green}{2}), (\numColor{red}{3}, \numColor{green}{3}), (\numColor{red}{4}, \numColor{green}{4}), (\numColor{red}{5}, \numColor{green}{5}), (\numColor{red}{6}, \numColor{green}{6})\}$
+
+$P(B) = \frac{6}{36} = \frac{1}{6}$
 
 \item \textbf{List the outcomes in } $\mathbf{A \cap B}$, \textbf{and find} $\mathbf{P(A \cap B)}$.
 
