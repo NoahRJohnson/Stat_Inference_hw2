@@ -6,6 +6,7 @@ output: pdf_document
 header-includes:
   - \usepackage{enumitem}
   - \usepackage{xcolor}
+  - \usepackage{amsmath}
 ---
 
 ```{r setup, include=FALSE}
@@ -83,7 +84,16 @@ Refer to the first equation above. $P(A \cup B) = 0.9$.
 
 \item \textbf{List out the sample space of the experiment.}
 
-$\Omega = \{ 2, 3, \dots, 12\}$
+$$
+\begin{aligned}
+\Omega = \{ (\numColor{red}{1}, \numColor{green}{1}), (\numColor{red}{1}, \numColor{green}{2}), (\numColor{red}{1}, \numColor{green}{3}), (\numColor{red}{1}, \numColor{green}{4}), (\numColor{red}{1}, \numColor{green}{5}), (\numColor{red}{1}, \numColor{green}{6}), \\
+(\numColor{red}{2}, \numColor{green}{1}), (\numColor{red}{2}, \numColor{green}{2}), (\numColor{red}{2}, \numColor{green}{3}), (\numColor{red}{2}, \numColor{green}{4}), (\numColor{red}{2}, \numColor{green}{5}), (\numColor{red}{2}, \numColor{green}{6}), \\
+(\numColor{red}{3}, \numColor{green}{1}), (\numColor{red}{3}, \numColor{green}{2}), (\numColor{red}{3}, \numColor{green}{3}), (\numColor{red}{3}, \numColor{green}{4}), (\numColor{red}{3}, \numColor{green}{5}), (\numColor{red}{3}, \numColor{green}{6}), \\
+(\numColor{red}{4}, \numColor{green}{1}), (\numColor{red}{4}, \numColor{green}{2}), (\numColor{red}{4}, \numColor{green}{3}), (\numColor{red}{4}, \numColor{green}{4}), (\numColor{red}{4}, \numColor{green}{5}), (\numColor{red}{4}, \numColor{green}{6}), \\
+(\numColor{red}{5}, \numColor{green}{1}), (\numColor{red}{5}, \numColor{green}{2}), (\numColor{red}{5}, \numColor{green}{3}), (\numColor{red}{5}, \numColor{green}{4}), (\numColor{red}{5}, \numColor{green}{5}), (\numColor{red}{5}, \numColor{green}{6}), \\
+(\numColor{red}{6}, \numColor{green}{1}), (\numColor{red}{6}, \numColor{green}{2}), (\numColor{red}{6}, \numColor{green}{3}), (\numColor{red}{6}, \numColor{green}{4}), (\numColor{red}{6}, \numColor{green}{5}), (\numColor{red}{6}, \numColor{green}{6})\}
+\end{aligned}
+$$
 
 \item \textbf{List the outcomes in } $\mathbf{A}$, \textbf{and find} $\mathbf{P(A)}$.
 
@@ -124,42 +134,44 @@ As mutually exclusive, since one event occurring precludes the other.
 
 \item \textbf{List the outcomes in } $\mathbf{A}$, \textbf{and find} $\mathbf{P(A)}$.
 
+
+\begin{multline*}
+A = \{ (\numColor{red}{1}, \numColor{green}{1}), (\numColor{red}{1}, \numColor{green}{3}), (\numColor{red}{1}, \numColor{green}{5}), (\numColor{red}{2}, \numColor{green}{2}), (\numColor{red}{2}, \numColor{green}{4}), (\numColor{red}{2}, \numColor{green}{6}), (\numColor{red}{3}, \numColor{green}{1}), (\numColor{red}{3}, \numColor{green}{3}), (\numColor{red}{3}, \numColor{green}{5}), (\numColor{red}{4}, \numColor{green}{2}), (\numColor{red}{4}, \numColor{green}{4}), (\numColor{red}{4}, \numColor{green}{6}), \\
+(\numColor{red}{5}, \numColor{green}{1}), (\numColor{red}{5}, \numColor{green}{3}), (\numColor{red}{5}, \numColor{green}{5}), (\numColor{red}{6}, \numColor{green}{2}), (\numColor{red}{6}, \numColor{green}{4}), (\numColor{red}{6}, \numColor{green}{6}) \}
+\end{multline*}
+
+Since the event A can be thought of as the union of all of its outcomes, and each outcome involves two independent die rolls, we can calculate P(A) as so:
+
 $$
-\begin{aligned}
-A = \{ (\numColor{red}{1}, \numColor{green}{1}), (\numColor{red}{1}, \numColor{green}{3}), (\numColor{red}{1}, \numColor{green}{5}), (\numColor{red}{2}, \numColor{green}{2}), (\numColor{red}{2}, \numColor{green}{4}), (\numColor{red}{2}, \numColor{green}{6}), (\numColor{red}{3}, \numColor{green}{1}), (\numColor{red}{3}, \numColor{green}{3}), (\numColor{red}{3}, \numColor{green}{5}), \\ (\numColor{red}{4}, \numColor{green}{2}), (\numColor{red}{4}, \numColor{green}{4}), (\numColor{red}{4}, \numColor{green}{6}), (\numColor{red}{5}, \numColor{green}{1}), (\numColor{red}{5}, \numColor{green}{3}), (\numColor{red}{5}, \numColor{green}{5}), (\numColor{red}{6}, \numColor{green}{2}), (\numColor{red}{6}, \numColor{green}{4}), (\numColor{red}{6}, \numColor{green}{6}) \} \\
-\\
-\text{Since the event A can be thought of as the union of all of its outcomes, and each outcome involves two independent die rolls, we can calculate P(A) as so:}
-\\
 P(A) = \sum\limits_{E_A \in A} P(E_A) \\
 = 12 * \frac{1}{30} + 6 * \frac{1}{60} = \frac{1}{2}
-\end{aligned}
 $$
 
 \item \textbf{List the outcomes in } $\mathbf{B}$, \textbf{and find} $\mathbf{P(B)}$.
 
-$$
-\begin{aligned}
+\begin{multline*}
 B = \{ (\numColor{red}{1}, \numColor{green}{2}), (\numColor{red}{1}, \numColor{green}{5}), (\numColor{red}{2}, \numColor{green}{1}), (\numColor{red}{2}, \numColor{green}{4}), (\numColor{red}{3}, \numColor{green}{3}), (\numColor{red}{3}, \numColor{green}{6}), (\numColor{red}{4}, \numColor{green}{2}), (\numColor{red}{4}, \numColor{green}{5}), (\numColor{red}{5}, \numColor{green}{1}),
 (\numColor{red}{5}, \numColor{green}{4}), (\numColor{red}{6}, \numColor{green}{3}),
-(\numColor{red}{6}, \numColor{green}{6})\} \\
-\\
-\text{Since the event B can be thought of as the union of all of its outcomes, and each outcome involves two independent die rolls, we can calculate P(B) as so:}
-\\
+(\numColor{red}{6}, \numColor{green}{6})\}
+\end{multline*}
+
+Since the event B can be thought of as the union of all of its outcomes, and each outcome involves two independent die rolls, we can calculate P(B) as so:
+
+$$
 P(B) = \sum\limits_{E_B \in B} P(E_B) \\
 = 8 * \frac{1}{30} + 4 * \frac{1}{60} = \frac{1}{3}
-\end{aligned}
 $$
 
 \item \textbf{List the outcomes in } $\mathbf{A \cap B}$, \textbf{and find} $\mathbf{P(A \cap B)}$.
 
 $$
-\begin{aligned}
 A \cap B = \{ (\numColor{red}{1}, \numColor{green}{5}), (\numColor{red}{2}, \numColor{green}{4}), (\numColor{red}{3}, \numColor{green}{3}), (\numColor{red}{4}, \numColor{green}{2}), (\numColor{red}{5}, \numColor{green}{1}),
-(\numColor{red}{6}, \numColor{green}{6})\} \\
-\\
+(\numColor{red}{6}, \numColor{green}{6})\}
+$$
+
+$$
 P(A \cap B) = \sum\limits_{E \in A \cap B} P(E) \\
 = 4 * \frac{1}{30} + 2 * \frac{1}{60} = \frac{1}{6}
-\end{aligned}
 $$
 
 \item \textbf{Are the events} $\mathbf{A}$ \textbf{and} $\mathbf{B}$ \textbf{independent? Explain why or why not.}
@@ -179,15 +191,42 @@ $$
 
 \item \textbf{What is the probability that a person has the disease given the results of the screening is positive?}
 
+We have $P(A|B)$ (the sensitivity) and $P(\tilde{A} | \tilde{B})$ (the specificity). We also know $P(B)$ (the underlying rate). We are interested in finding $P(B|A)$.
+
+Our first instinct is to use Bayes' Rule to flip the condition. 
+
+$$
+P(B|A) = \frac{P(A|B) * P(B)}{P(A)}
+$$
+
+However, we don't know $P(A)$, so it looks like we're stuck. Thankfully the specificity will help us out.
+
 $$
 \begin{aligned}
-P(A | B) = \frac{P(B \cap A)}{P(B)} = \frac{1/6}{1/2} = \frac{1}{3} \\
-= \frac{1}{3} = P(B)\ \therefore \text{A and B are independent events.}
+P(A) = P(A \cap B) + P(A \cap \tilde{B}) \\
+= P(A|B) * P(B) + P(A|\tilde{B}) * P(\tilde{B})
 \end{aligned}
 $$
 
+From the underlying rate, $P(\tilde{B}) = 1 - P(B) = 1 - .001 = .999$.
+
+And from the specificity, $P(A|\tilde{B}) = 1 - P(\tilde{A}|\tilde{B}) = 1 - .95 = .05$.
+
+Now we have all the pieces:
+
+$$
+\begin{aligned}
+P(A) = P(A|B) * P(B) + P(A|\tilde{B}) * P(\tilde{B}) \\
+= .9 * .001 + .05 * .999 = .05085\\
+\\
+P(B|A) = \frac{P(A|B) * P(B)}{P(A)} = \frac{.9 * .001}{.05085} \approx .0177
+\end{aligned}
+$$
+
+So given a positive result from the medical screening, the probability that a person has that specific cancer is only around 1.77\%. Very low!
+
 \item \textbf{Does this show that screening is effective in detecting this cancer?}
 
-
+No, since even with a positive screening result, it is more likely that a person does not have this specific cancer than that they do. A positive screening does raise the probability of having the cancer by an order of magnitude, but since the initial probability was so low, this isn't too helpful. Medical researchers should focus on raising the specificity of the screening, in order to make it effective.
 
 \end{enumerate}
